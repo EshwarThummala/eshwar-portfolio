@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import scrollDown from '../public/assets/images/scroll-down.png'
+import scrollDown from "../public/assets/images/scroll-down.png";
 import Image from "next/image";
 
 const Banner = () => {
-
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
@@ -12,7 +11,7 @@ const Banner = () => {
     elem?.scrollIntoView({
       behavior: "smooth",
     });
-  }
+  };
 
   return (
     <section
@@ -25,7 +24,7 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="text-lg font-titleFont tracking-wide text-textGreen"
       >
-        Hi, my name is
+        Hi, this is
       </motion.h3>
       <motion.h1
         initial={{ y: 10, opacity: 0 }}
@@ -35,7 +34,7 @@ const Banner = () => {
       >
         Eshwar Reddy Thummala.
         <span className="text-textDark mt-2 lgl:mt-4">
-          I build things for the web.
+          I enjoy exporling and building software solutions.
         </span>
       </motion.h1>
       <motion.p
@@ -44,17 +43,11 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        I am a web developer with 4+ years of experience in React. I have a
-        strong foundation in front-end & back-end development and am skilled in
-        creating user-friendly and responsive web applications using React and
-        its ecosystem.{" "}
-        <a href="https://www.noormohammad.live/" target="_blank">
-          {" "}
-          <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
-            Learn more
-            <span className="absolute w-full h-[1px] bg-textGreen left-0 bottom-1 -translate-x-[110%] group-hover:translate-x-0 transition-transform duration-500"></span>
-          </span>
-        </a>
+        Exploring new things in the pursuit of knowledge fuel my personal
+        growth. However, my true strength resides in my ability to adapt and
+        shape myself. More importantly, I cultivate passion and maintain
+        discipline while dealing with challenges, and I take fun in overcoming
+        them.
       </motion.p>
       <a href="#about" onClick={handleScroll}>
         <motion.button
@@ -63,7 +56,7 @@ const Banner = () => {
           transition={{ duration: 0.5, delay: 0.9 }}
           className="animate-bounce w-52 h-14 text-sm font-titleFont text-textDark tracking-wide hover:bg-hoverColor duration-300"
         >
-            <Image className="w-14" src={scrollDown} alt="logo" />
+          <Image className="w-14" src={scrollDown} alt="logo" />
         </motion.button>
       </a>
     </section>
