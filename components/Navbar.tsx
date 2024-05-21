@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="hidden mdl:inline-flex items-center gap-7">
           <ul className="flex text-[13px] gap-7">
             <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textDark hover:scale-125 cursor-pointer duration-300 nav-link"
               href="#home"
               onClick={handleScroll}
             >
@@ -71,7 +71,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen hover:scale-125 cursor-pointer duration-300 nav-link"
               href="#about"
               onClick={handleScroll}
             >
@@ -84,7 +84,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen hover:scale-125 cursor-pointer duration-300 nav-link"
               href="#experience"
               onClick={handleScroll}
             >
@@ -97,7 +97,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen hover:scale-125 cursor-pointer duration-300 nav-link"
               href="#project"
               onClick={handleScroll}
             >
@@ -110,7 +110,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen hover:scale-125 cursor-pointer duration-300 nav-link"
               href="#contact"
               onClick={handleScroll}
             >
@@ -128,7 +128,7 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
+              className="px-4 py-2 rounded-md text-textGreen text-[13px] border border-textGreen hover:scale-125 hover:bg-textDark hover:text-bodyColor duration-300"
             >
               Resume
             </motion.button>
@@ -153,16 +153,16 @@ const Navbar = () => {
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.1 }}
-              className="w-[80%] h-full overflow-y-scroll scrollbarHide bg-[#112240] flex flex-col items-center px-4 py-10 relative"
+              className="w-[80%] h-full overflow-y-scroll scrollbarHide bg-textDark flex flex-col items-center px-4 py-10 relative"
             >
               <MdOutlineClose
                 onClick={() => setShow(false)}
-                className="text-3xl text-textGreen cursor-pointer hover:text-red-500 absolute top-4 right-4"
+                className="text-3xl text-textLight cursor-pointer hover:text-red-500 absolute top-4 right-4"
               />
               <div className="flex flex-col items-center gap-7">
                 <ul className="flex flex-col text-base gap-7">
                   <Link
-                    className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                    className="flex items-center gap-1 font-medium text-textLight hover:text-bodyColor cursor-pointer duration-300 nav-link"
                     href="#home"
                     onClick={handleScroll}
                   >
@@ -176,7 +176,7 @@ const Navbar = () => {
                   </Link>
 
                   <Link
-                    className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                    className="flex items-center gap-1 font-medium text-textLight hover:text-bodyColor cursor-pointer duration-300 nav-link"
                     href="#about"
                     onClick={handleScroll}
                   >
@@ -185,12 +185,11 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.2, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">01.</span>
                       About
                     </motion.li>
                   </Link>
                   <Link
-                    className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                    className="flex items-center gap-1 font-medium text-textLight hover:text-bodyColor cursor-pointer duration-300 nav-link"
                     href="#experience"
                     onClick={handleScroll}
                   >
@@ -199,12 +198,11 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.3, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">02.</span>
                       Experience
                     </motion.li>
                   </Link>
                   <Link
-                    className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                    className="flex items-center gap-1 font-medium text-textLight hover:text-bodyColor cursor-pointer duration-300 nav-link"
                     href="#project"
                     onClick={handleScroll}
                   >
@@ -213,12 +211,11 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.4, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">03.</span>
                       Project
                     </motion.li>
                   </Link>
                   <Link
-                    className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
+                    className="flex items-center gap-1 font-medium text-textLight hover:text-bodyColor cursor-pointer duration-300 nav-link"
                     href="#contact"
                     onClick={handleScroll}
                   >
@@ -227,7 +224,6 @@ const Navbar = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.5, ease: "easeIn" }}
                     >
-                      <span className="text-textGreen">04.</span>
                       Contact
                     </motion.li>
                   </Link>
@@ -237,7 +233,7 @@ const Navbar = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, ease: "easeIn" }}
-                    className="w-32 h-10 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
+                    className="w-32 h-10 rounded-md text-textLight text-[13px] border border-bodyColor hover:bg-hoverColor duration-300"
                   >
                     Resume
                   </motion.button>
@@ -250,7 +246,7 @@ const Navbar = () => {
                     href="https://github.com/noorjsdivs"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-textLight text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textLight cursor-pointer hover:-translate-y-2 transition-all duration-300">
                       <TbBrandGithub />
                     </span>
                   </motion.a>
@@ -261,7 +257,7 @@ const Navbar = () => {
                     href="https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
                       <SlSocialYoutube />
                     </span>
                   </motion.a>
@@ -272,7 +268,7 @@ const Navbar = () => {
                     href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
                       <SlSocialLinkedin />
                     </span>
                   </motion.a>
@@ -283,7 +279,7 @@ const Navbar = () => {
                     href="https://www.facebook.com/Noorlalu143/"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
                       <SlSocialFacebook />
                     </span>
                   </motion.a>
@@ -294,7 +290,7 @@ const Navbar = () => {
                     href="https://www.instagram.com/simplenoor143/"
                     target="_blank"
                   >
-                    <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
                       <SlSocialInstagram />
                     </span>
                   </motion.a>
@@ -305,10 +301,10 @@ const Navbar = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, ease: "easeIn" }}
-                className="text-sm w-72 tracking-widest text-textGreen text-center mt-4"
+                className="text-sm w-72 tracking-widest text-textLight text-center mt-4"
                 href="mailto:noor.jsdivs@gmail.com"
               >
-                <p>reactbd@proton.me</p>
+                <p>ethummal@asu.edu</p>
               </motion.a>
             </motion.div>
           </div>

@@ -1,5 +1,19 @@
 import { motion } from "framer-motion";
+import scrollDown from '../public/assets/images/scroll-down.png'
+import Image from "next/image";
+
 const Banner = () => {
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <section
       id="home"
@@ -42,14 +56,14 @@ const Banner = () => {
           </span>
         </a>
       </motion.p>
-      <a href="https://github.com/noorjsdivs" target="_blank">
+      <a href="#about" onClick={handleScroll}>
         <motion.button
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.9 }}
-          className="w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
+          className="animate-bounce w-52 h-14 text-sm font-titleFont text-textDark tracking-wide hover:bg-hoverColor duration-300"
         >
-          Check out my project!
+            <Image className="w-14" src={scrollDown} alt="logo" />
         </motion.button>
       </a>
     </section>
