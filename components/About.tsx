@@ -9,34 +9,36 @@ const About = () => {
       id="about"
       className="max-w-containerSmall mx-auto py-10 lgl:py-32 flex flex-col gap-8"
     >
-      <SectionTitle title="About Me" titleNo="01" />
+      <SectionTitle title="About Me" />
       <div className="flex flex-col lgl:flex-row gap-16">
         <div className="w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4">
           <p>
-            Hello! My name is Eshwar Reddy Thummala and I enjoy creating things that
-            live on the internet. My interest in web development started back in
-            2012 when I decided to try editing custom Tumblr themes — turns out
-            hacking together a custom reblog button taught me a lot about HTML &
-            CSS!
+            I build software solutions and applications. I am a software
+            developer.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            I've always had a knack for computers and their endless
+            possibilities, which led me down some interesting paths and brought
+            me to where I am today. And, I am really glad I made those choices!
+            I believe an individual is way more productive when he/she is
+            passionate about their work. That passion for all things software
+            turned my professional life into a breezy adventure and helped me
+            rack up some pretty cool achievements along the way.{" "}
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            I've learned about software through both formal education and
+            professional journey, but most of my experience comes from personal
+            projects. After finishing my undergraduate computer science degree,
+            I worked at Tata Consultancy Services where I helped develope a
+            insurance web app for USAA Financial Services Company. Working there
+            made me realize there's still so much more to learn, which is why I
+            decided to pursue further studies.
           </p>
           <p>
-            Fast-forward to today, and I had the privilege of working at an
-            advertising agency, a start-up,{" "}
-            <span className="text-textGreen">
-              a huge corporation, and a student-led design studio.
-            </span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem
-            accusantium fugiat veritatis, quidem repellat{" "}
-            <span className="text-textGreen">
-              ab natus possimus? Sint, accusamus!
-            </span>
+            Now, I am a student pursuing my Master's degree in Computer Science
+            at Arizona State University.
           </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-            ullam eligendi dolorum nostrum possimus quos iusto magnam ut esse
-            recusandae.
-          </p>
-          <p>Here are a few technologies I have been working with recently:</p>
+          {/*<p>Here are a few technologies I have been working with recently:</p>
           <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
             <li className="flex items-center gap-2">
               <span className="text-textGreen">
@@ -87,6 +89,7 @@ const About = () => {
               Tailwindcss
             </li>
           </ul>
+  */}
         </div>
         <div className="w-full lgl:w-1/3 h-80 relative group">
           <div className="absolute w-full h-80 -left-6 -top-6 rounded-lg ">
