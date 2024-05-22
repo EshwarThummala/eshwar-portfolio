@@ -16,7 +16,6 @@
   transform: scale(1.25);
 }
 
-
 .bg-img::before {
   content: '';
   position: absolute;

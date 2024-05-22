@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import SectionTitle from "./SectionTitle";
 import Amazon from "./works/Amazon";
 import Apple from "./works/Apple";
@@ -7,49 +7,29 @@ import ReactBD from "./works/ReactBD";
 import Splash from "./works/Splash";
 
 const Experience = () => {
-  const [workReactbd, setWorkReactbd] = useState(true);
-  const [workGoogle, setWorkGoogle] = useState(false);
-  const [workApple, setWorkApple] = useState(false);
-  const [workSplash, setWorkSplash] = useState(false);
-  const [workAmazon, setWorkAmazon] = useState(false);
+  const [workVirtualness, setWorkVirtualness] = useState(true)
+  const [workTCS, setWorkTCS]  = useState(false)
+  const [workCognizant, setWorkCongnizant] = useState(false)
 
-  const handleReactbd = () => {
-    setWorkReactbd(true);
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(false);
+
+  const handleWorkVirtualness = () => {
+    setWorkVirtualness(true);
+    setWorkTCS(false);
+    setWorkCongnizant(false)
   };
 
-  const handleGoogle = () => {
-    setWorkReactbd(false);
-    setWorkGoogle(true);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(false);
-  };
+  const handleWorkTCS = () => {
+    setWorkVirtualness(false);
+    setWorkTCS(true);
+    setWorkCongnizant(false)
+  }
 
-  const handleApple = () => {
-    setWorkReactbd(false);
-    setWorkGoogle(false);
-    setWorkApple(true);
-    setWorkSplash(false);
-    setWorkAmazon(false);
-  };
-  const handleSplash = () => {
-    setWorkReactbd(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(true);
-    setWorkAmazon(false);
-  };
-  const handleAmazon = () => {
-    setWorkReactbd(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
-    setWorkSplash(false);
-    setWorkAmazon(true);
-  };
+  const handleWorkCognizant = () => {
+    setWorkVirtualness(false);
+    setWorkTCS(false);
+    setWorkCongnizant(true)
+  }
+
   return (
     <section
       id="experience"
@@ -59,61 +39,39 @@ const Experience = () => {
       <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
         <ul className="md:w-32 flex flex-col">
           <li
-            onClick={handleReactbd}
+            onClick={handleWorkVirtualness}
             className={`${
-              workReactbd
+              workVirtualness
                 ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+                : "border-l-bodyColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-textDark hover:text-bodyColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
-            RactBD
+            Virtualness
           </li>
           <li
-            onClick={handleGoogle}
+            onClick={handleWorkTCS}
             className={`${
-              workGoogle
+              workTCS
                 ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+                : "border-l-bodyColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-textDark hover:text-bodyColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
-            Google
+            TCS
           </li>
           <li
-            onClick={handleApple}
+            onClick={handleWorkCognizant}
             className={`${
-              workApple
+              workCognizant
                 ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+                : "border-l-bodyColor text-textDark"
+            } border-l-2 bg-transparent hover:bg-textDark hover:text-bodyColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
-            Apple
-          </li>
-          <li
-            onClick={handleSplash}
-            className={`${
-              workSplash
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Splash
-          </li>
-          <li
-            onClick={handleAmazon}
-            className={`${
-              workAmazon
-                ? "border-l-textGreen text-textGreen"
-                : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Amazon
+            Cognizant
           </li>
         </ul>
-        {workReactbd && <ReactBD />}
-        {workGoogle && <Google />}
-        {workApple && <Apple />}
-        {workSplash && <Splash />}
-        {workAmazon && <Amazon />}
+        {workVirtualness && <ReactBD />}
+        {workTCS && <Google />}
+        {workCognizant && <Apple />}
       </div>
     </section>
   );
