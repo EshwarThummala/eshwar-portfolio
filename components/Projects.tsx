@@ -10,6 +10,8 @@ import smieProjectImage from "../public/assets/images/project_images/smie.png";
 import smieColorProjectImage from "../public/assets/images/project_images/smie_color.png";
 import ecommerceProjectImage from "../public/assets/images/project_images/ecommerce.png";
 import ecommerceColorProjectImage from "../public/assets/images/project_images/ecommerce_color.png";
+import multimediaProjectImage from "../public/assets/images/project_images/multimedia.png";
+import multimediaColorProjectImage from "../public/assets/images/project_images/multimedia_color.png";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { useState } from "react";
 
@@ -17,6 +19,7 @@ const Projects = () => {
   const [awsImage, setAWSImage] = useState(awsProjectImage);
   const [smieImage, setSMIEImage] = useState(smieProjectImage);
   const [ecommerceImage, setEcommerceImage] = useState(ecommerceProjectImage);
+  const [multimediaImage, setMultimediaImage] = useState(multimediaProjectImage)
   const imageChangeHandler = (
     newImage: StaticImageData,
     setImage: Function
@@ -233,6 +236,63 @@ const Projects = () => {
           </div>
         </div>
         {/* ============ project Three End here ================== */}
+        {/* ============ project Four Start here ================ */}
+        <div className="flex flex-col xl:flex-row-reverse gap-6">
+          <a
+            className="w-full xl:w-1/2 h-auto relative group"
+            href="https://docs.google.com/document/d/1E63Y18SU4qUesy6CuPWB24ZPsheRcyHi7lH2abp-8OI/edit?usp=sharing"
+            target="_blank"
+          >
+            <div
+              onMouseEnter={() =>
+                imageChangeHandler(multimediaColorProjectImage, setMultimediaImage)
+              }
+              onMouseLeave={() =>
+                imageChangeHandler(multimediaProjectImage, setMultimediaImage)
+              }
+            >
+              <Image
+                className="w-full object-contain"
+                src={multimediaImage}
+                alt="SMIE project Image"
+              />
+              <div className="absolute w-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
+            </div>
+          </a>
+          <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
+            <div>
+              <h3 className="text-2xl font-bold">
+                Multimedia(Image) Database Search
+              </h3>
+            </div>
+            <p className="text-sm md:text-base bg-textDark text-bodyColor p-2 md:p-6 rounded-md xl:-mr-16">
+              A team project focuses on implementing and experimenting with the
+              image processing algorithms on a database of 10,000 images to
+              facilitate search functionality for a given input image. Some of
+              the algorithms used in this project are SVD, LDA, NNMF, and CP
+              decomposition. Some of the distance metrics used are Euclidean,
+              Cosine Similarity, and Manhattan
+            </p>
+            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
+              <li>Python</li>
+              <li>Tensorflow</li>
+              <li>Keras</li>
+              <li>PyTorch</li>
+              <li>Numpy</li>
+              <li>Pandas</li>
+            </ul>
+            <div className="text-2xl flex gap-4">
+              <a
+                className="hover:text-textGreen duration-300"
+                href="https://docs.google.com/document/d/1E63Y18SU4qUesy6CuPWB24ZPsheRcyHi7lH2abp-8OI/edit?usp=sharing"
+                target="_blank"
+              >
+                <IoDocumentTextOutline />
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* ============ project Four End here ================== */}
       </div>
     </section>
   );
