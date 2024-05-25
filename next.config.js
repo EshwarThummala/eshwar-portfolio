@@ -1,5 +1,6 @@
 const nextConfig = {
   reactStrictMode: true,
+  distDir: 'build',
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/,
