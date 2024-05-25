@@ -17,7 +17,7 @@ const About = () => {
             developer.
           </p>
           <p style={{ textAlign: "justify" }}>
-            I've always had a knack for computers and their endless
+            I have always had a knack for computers and their endless
             possibilities, which led me down some interesting paths and brought
             me to where I am today. And, I am really glad I made those choices!
             I believe an individual is way more productive when he/she is
@@ -26,16 +26,16 @@ const About = () => {
             rack up some pretty cool achievements along the way.{" "}
           </p>
           <p style={{ textAlign: "justify" }}>
-            I've learned about software through both formal education and
+            I have learned about software through both formal education and
             professional journey, but most of my experience comes from personal
             projects. After finishing my undergraduate computer science degree,
             I worked at Tata Consultancy Services where I helped develope a
             insurance web app for USAA Financial Services Company. Working there
-            made me realize there's still so much more to learn, which is why I
+            made me realize there is still so much more to learn, which is why I
             decided to pursue further studies.
           </p>
           <p>
-            Now, I am a student pursuing my Master's degree in Computer Science
+            Now, I am a student pursuing my Masters degree in Computer Science
             at Arizona State University.
           </p>
           {/*<p>Here are a few technologies I have been working with recently:</p>

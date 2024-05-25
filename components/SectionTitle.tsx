@@ -1,6 +1,5 @@
 interface Props {
   title: string;
-  titleNo: string;
 }
 
 const SectionTitle = ({ title }: Props) => {
