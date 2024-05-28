@@ -1,4 +1,3 @@
-import { cyberImg, noorShop } from "@/public/assets";
 import Image, { StaticImageData } from "next/image";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { TbBrandGithub } from "react-icons/tb";

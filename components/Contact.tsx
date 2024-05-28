@@ -118,7 +118,6 @@ const Contact = () => {
           </div>
         </div>
       </form>
-      <a href="mailto:noor.jsdivs@gmail.com"></a>
     </section>
   );
 };
