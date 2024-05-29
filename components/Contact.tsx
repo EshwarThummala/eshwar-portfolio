@@ -2,39 +2,47 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 const Contact = () => {
-  const [ firstName, setFirstName ] = useState("")
-  const [ lastName, setLastName ] = useState("")
-  const [ message, setMessage ] = useState("")
-  const [contact, setContact] = useState("")
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [message, setMessage] = useState("");
+  const [contact, setContact] = useState("");
+  const [isSumbitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e:  any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    emailjs
-      .send(
-        'service_z50zxqw',
-        'template_4d5s9uq',
-        {
-          from_name: firstName+" "+lastName,
-          to_name: 'Eshwar Reddy Thummala',
-          from_email: contact,
-          to_email: 'ethummal@asu.edu',
-          message: message+ "\nContact : "+contact,
-        },
-        'okYJuWuDG_xloLsiu'
-      )
-      .then(
-        () => {
-          alert('Thank you. I will get back to you as soon as possible.');
-          setFirstName("")
-          setLastName("")
-          setMessage("")
-          setContact("")
-        },
-        (error) => {
-          console.log(error);
-          alert('Something went wrong. Please try again.');
-        }
-      );
+    if (firstName.length != 0 && lastName.length != 0 && message.length != 0) {
+      setIsSubmitted(true);
+      emailjs
+        .send(
+          "service_z50zxqw",
+          "template_4d5s9uq",
+          {
+            from_name: firstName + " " + lastName,
+            to_name: "Eshwar Reddy Thummala",
+            from_email: contact,
+            to_email: "ethummal@asu.edu",
+            message: message + "\nContact : " + contact,
+          },
+          "okYJuWuDG_xloLsiu"
+        )
+        .then(
+          () => {
+            alert("Thank you. I will get back to you as soon as possible.");
+            setFirstName("");
+            setLastName("");
+            setMessage("");
+            setContact("");
+            setIsSubmitted(false);
+          },
+          (error) => {
+            console.log(error);
+            alert("Something went wrong. Please try again.");
+            setIsSubmitted(false);
+          }
+        );
+    } else {
+      setIsSubmitted(true);
+    }
   };
 
   return (
@@ -64,10 +72,13 @@ const Contact = () => {
               placeholder="Jane"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
-            {/*<p className="text-red-500 text-xs italic">
-                Please fill out this field.
-  </p>*/}
+            {isSumbitted && firstName.length == 0 && (
+              <p className="text-red-500 text-xs mb-3 italic">
+                Please enter your first name.
+              </p>
+            )}
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label className="block uppercase tracking-wide text-bodyColor text-xs font-bold mb-2">
@@ -93,7 +104,13 @@ const Contact = () => {
               rows={10}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
+              required
+            />
+            {isSumbitted && message.length == 0 && (
+              <p className="text-red-500 text-xs mb-3 italic">
+                Please enter some message
+              </p>
+            )}
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label className="block uppercase tracking-wide text-bodyColor text-xs font-bold mb-2">
@@ -106,7 +123,13 @@ const Contact = () => {
               placeholder="Email, Phone, Linkedin..."
               value={contact}
               onChange={(e) => setContact(e.target.value)}
+              required
             />
+            {isSumbitted && contact.length == 0 && (
+              <p className="text-red-500 text-xs mb-3 italic">
+                Please enter some message
+              </p>
+            )}
           </div>
           <div className="w-full px-3 flex justify-center">
             <button
