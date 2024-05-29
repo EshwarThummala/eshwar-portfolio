@@ -51,7 +51,7 @@ const Contact = () => {
         always open. Whether you want some help or have a question or just want
         to say hi, I’ll try my best to get back to you!
       </p>
-      <form className="w-full max-w-lg bg-textDark p-10 rounded-md mt-4">
+      <form className="w-full bg-textDark p-10 rounded-md mt-4">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label className="block uppercase tracking-wide text-bodyColor text-xs font-bold mb-2">

@@ -12,6 +12,7 @@ import {
 } from "react-icons/sl";
 import { MdOutlineClose } from "react-icons/md";
 import { motion } from "framer-motion";
+import { HiOutlinePhone } from "react-icons/hi2";
 
 const Navbar = () => {
   const ref = useRef<string | any>("");
@@ -123,7 +124,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
           </ul>
-          <a href="/assets/noor_resume.pdf" target="_blank">
+          <a href="/assets/eshwar_resume.pdf" target="_blank">
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -228,7 +229,7 @@ const Navbar = () => {
                     </motion.li>
                   </Link>
                 </ul>
-                <a href="/assets/noor_resume.pdf" target="_blank">
+                <a href="/assets/eshwar_resume.pdf" target="_blank">
                   <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -243,7 +244,7 @@ const Navbar = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.8, ease: "easeIn" }}
-                    href="https://github.com/noorjsdivs"
+                    href="https://github.com/EshwarThummala"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-textLight text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textLight cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -253,19 +254,8 @@ const Navbar = () => {
                   <motion.a
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.85, ease: "easeIn" }}
-                    href="https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"
-                    target="_blank"
-                  >
-                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
-                      <SlSocialYoutube />
-                    </span>
-                  </motion.a>
-                  <motion.a
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.9, ease: "easeIn" }}
-                    href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
+                    href="https://www.linkedin.com/in/eshwar-thummala/"
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -276,24 +266,21 @@ const Navbar = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.95, ease: "easeIn" }}
-                    href="https://www.facebook.com/Noorlalu143/"
-                    target="_blank"
+                    data-tooltip-target="tooltip-phone-collapse"
+                    data-tooltip-placement="top"
                   >
                     <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
-                      <SlSocialFacebook />
+                      <HiOutlinePhone />
                     </span>
                   </motion.a>
-                  <motion.a
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 1, ease: "easeIn" }}
-                    href="https://www.instagram.com/simplenoor143/"
-                    target="_blank"
+                  <div
+                    id="tooltip-phone-collapse"
+                    role="tooltip"
+                    className="absolute z-10 invisible inline-block px-3 py-2 text-xs text-bodyColor bg-bodyColor rounded-lg shadow-sm opacity-1 tooltip"
                   >
-                    <span className="w-10 h-10 text-xl bg-textDark border-[1px] border-zinc-700 hover:border-bodyColor text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-bodyColor cursor-pointer hover:-translate-y-2 transition-all duration-300">
-                      <SlSocialInstagram />
-                    </span>
-                  </motion.a>
+                    +1 (480)-853-2372
+                    <div className="tooltip-arrow" data-popper-arrow></div>
+                  </div>
                 </div>
               </div>
 
@@ -302,7 +289,7 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, ease: "easeIn" }}
                 className="text-sm w-72 tracking-widest text-textLight text-center mt-4"
-                href="mailto:noor.jsdivs@gmail.com"
+                href="#contact"
               >
                 <p>ethummal@asu.edu</p>
               </motion.a>
