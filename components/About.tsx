@@ -27,16 +27,17 @@ const About = () => {
           </p>
           <p style={{ textAlign: "justify" }}>
             I have learned about software through both formal education and
-            professional journey, but most of my experience comes from personal
-            projects. After finishing my undergraduate computer science degree,
+            professional journey. After finishing my undergraduate computer science degree,
             I worked at Tata Consultancy Services where I helped develope a
             insurance web app for USAA Financial Services Company. Working there
             made me realize there is still so much more to learn, which is why I
             decided to pursue further studies.
           </p>
-          <p>
+          <p style={{ textAlign: "justify" }}>
             Now, I am a student pursuing my Masters degree in Computer Science
-            at Arizona State University.
+            at Arizona State University. But I never confined myself to just academics—I’m more of a hands-on learner. 
+            I joined a startup called Verix (formerly Virtualness) as a Backend Engineer,
+            and the experience has been invaluable. It gave me a whole new perspective on software development.
           </p>
           {/*<p>Here are a few technologies I have been working with recently:</p>
           <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">

@@ -1,10 +1,8 @@
 import { use, useState } from "react";
 import SectionTitle from "./SectionTitle";
-import Amazon from "./works/Amazon";
-import Apple from "./works/Apple";
-import Google from "./works/Google";
-import ReactBD from "./works/ReactBD";
-import Splash from "./works/Splash";
+import Cognizant from "./works/Cognizant";
+import TCS from "./works/TCS";
+import Verix from "./works/Verix";
 
 const Experience = () => {
   const [workVirtualness, setWorkVirtualness] = useState(true)
@@ -46,7 +44,7 @@ const Experience = () => {
                 : "border-l-bodyColor text-textDark"
             } border-l-2 bg-transparent hover:bg-textDark hover:text-bodyColor py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
-            Virtualness
+            Verix
           </li>
           <li
             onClick={handleWorkTCS}
@@ -69,9 +67,9 @@ const Experience = () => {
             Cognizant
           </li>
         </ul>
-        {workVirtualness && <ReactBD />}
-        {workTCS && <Google />}
-        {workCognizant && <Apple />}
+        {workVirtualness && <Verix />}
+        {workTCS && <TCS />}
+        {workCognizant && <Cognizant />}
       </div>
     </section>
   );

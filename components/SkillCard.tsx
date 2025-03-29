@@ -6,7 +6,7 @@ interface Props {
   CustomIcon: IconType
 }
 
-const ArchiveCard = ({ title, CustomIcon }: Props) => {
+const SkillCard = ({ title, CustomIcon }: Props) => {
   return (
     <div className="w-full h-25 rounded-lg bg-textDark p-7 flex flex-col justify-center gap-6 hover:scale-110 transition-transform duration-300 group">
       <div className="flex justify-center">
@@ -27,4 +27,4 @@ const ArchiveCard = ({ title, CustomIcon }: Props) => {
   );
 };
 
-export default ArchiveCard;
+export default SkillCard;

@@ -1,7 +1,14 @@
 import { useState } from "react";
-import ArchiveCard from "./ArchiveCard";
+import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
-import { SiFlask, SiKibana, SiPowerbi, SiTensorflow } from "react-icons/si";
+import { 
+  SiFlask,
+  SiKibana,
+  SiPowerbi,
+  SiTensorflow,
+  SiCelery,
+  SiGoogleassistant,
+  SiDjango } from "react-icons/si";
 import { FaPython, FaReact, FaJs, FaAndroid, FaGitAlt } from "react-icons/fa";
 import {
   BiLogoSpringBoot,
@@ -18,9 +25,9 @@ import { VscSettings } from "react-icons/vsc";
 import { DiScrum, DiMysql } from "react-icons/di";
 import { MdOutlineInsertChart } from "react-icons/md";
 import { PiFileSqlThin } from "react-icons/pi";
+import { TbBrandOauth } from "react-icons/tb";
 
-
-const Archive = () => {
+const Skills = () => {
   const [showMore, setShowMore] = useState(false);
   const firstSkills = [
     {
@@ -68,6 +75,10 @@ const Archive = () => {
     {
       name: "React JS",
       icon: FaReact,
+    },
+    {
+      name: "Django",
+      icon: SiDjango
     },
     {
       name: "Flask",
@@ -124,13 +135,29 @@ const Archive = () => {
     {
       name: "Tensorflow",
       icon: SiTensorflow
+    },
+    {
+      name: "OAuth",
+      icon: TbBrandOauth,
+    },
+    {
+      name: "Celery",
+      icon: SiCelery
+    },
+    {
+      name: "LLM",
+      icon: SiGoogleassistant
+    },
+    {
+      name: "RAG",
+      icon: BsRobot
     }
   ];
   return (
     <div className="max-w-contentContainer mx-auto px-4 py-24">
       <div className="w-full flex flex-col items-center">
         <h2 className="text-3xl font-titleFont font-semibold">
-          Different Technology Domains I worked
+          Things I Worked With
         </h2>
         {/*<p className="text-sm font-titleFont text-textGreen">
           ofcourse there are many...
@@ -138,7 +165,7 @@ const Archive = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-6 mt-10 lgl:px-10">
         {firstSkills.map((skill) => (
-          <ArchiveCard
+          <SkillCard
             key={skill.name}
             title={skill.name}
             CustomIcon={skill.icon}
@@ -154,7 +181,7 @@ const Archive = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.1 }}
                 >
-                  <ArchiveCard title={skill.name} CustomIcon={skill.icon} />
+                  <SkillCard title={skill.name} CustomIcon={skill.icon} />
                 </motion.div>
               );
             })}
@@ -182,4 +209,4 @@ const Archive = () => {
   );
 };
 
-export default Archive;
+export default Skills;

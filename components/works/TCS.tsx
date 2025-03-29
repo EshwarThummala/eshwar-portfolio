@@ -1,6 +1,6 @@
 import { TiArrowForward } from "react-icons/ti";
 import { motion } from "framer-motion";
-const Google = () => {
+const TCS = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,49 +22,44 @@ const Google = () => {
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Engineered nearly 20 React UI features for an agile-managed Umbrella
-          Insurance web application at USAA.
+          Developed a dynamic insurance web application using React, leveraging Redux for centralized state
+          management to ensure seamless data flow
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Utilized React-Redux framework to create adaptive web pages rendered
-          based on JSON data from APIs.
+          Integrated robust error handling and user-friendly messaging, interpreting backend response codes to
+          enhance user experience and prevent dead-end scenarios.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Developed SpringBoot REST API functionalities, incorporating a new
-          endpoint to retrieve and manage intricate customer information from
-          nearly 5 underlying legacy API systems and databases using SQL.
+          Addressed 40-45% of significant UI defects and features, enhancing team bandwidth by 30-50%.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Used various testing libraries like React-testing-library, Mockito,
-          and Cypress to test API and UI functionalities. Integrated the tests
-          with CI/CD pipelines.
+          Developed SpringBoot REST API functionalities, incorporating a new endpoint to retrieve and manage
+          intricate customer information from multiple underlying legacy API systems.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Increased team productivity by 50% & recognized as one of the top 1\%
-          of technical resources.
+          Increased team productivity by 50% and recognized in one of the top 1% of technical resources.
         </li>
         <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
-          Led a team in technical capacities, earning a special initiative award
-          for exceptional leadership.
+          Led a team in technical capacities, earning a special initiative award for exceptional leadership.
         </li>
       </ul>
     </motion.div>
   );
 };
 
-export default Google;
+export default TCS;

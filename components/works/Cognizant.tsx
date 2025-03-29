@@ -1,7 +1,7 @@
 import { TiArrowForward } from "react-icons/ti";
 import { motion } from "framer-motion";
 
-const Apple = () => {
+const Cognizant = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,4 +36,4 @@ const Apple = () => {
   );
 };
 
-export default Apple;
+export default Cognizant;
