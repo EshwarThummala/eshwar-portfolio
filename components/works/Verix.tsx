@@ -20,6 +20,18 @@ const Verix = () => {
       </p>
       <ul className="mt-6 flex flex-col gap-3">
         <li className="text-base flex gap-2 text-textDark">
+            <span className="text-textGreen mt-1">
+              <TiArrowForward />
+            </span>
+            Worked on RAG (Retrieval-Augmented Generation) workflow to integrate API documentation and guidelines into LLM-based chat interactions.
+        </li>
+        <li className="text-base flex gap-2 text-textDark">
+            <span className="text-textGreen mt-1">
+              <TiArrowForward />
+            </span>
+            Developed a product leveraging LLMs and modern frameworks to generate personalized newsletters by scraping the web and using public APIs to compile recent events and updates for a given individual based on contextual input.
+        </li>
+        <li className="text-base flex gap-2 text-textDark">
           <span className="text-textGreen mt-1">
             <TiArrowForward />
           </span>
